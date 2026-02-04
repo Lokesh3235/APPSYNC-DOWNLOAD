@@ -1,0 +1,716 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  EditOrganization(input: EditOrganizationInput): AWSJSON
+  GenerateExcelReport(input: GenerateExcelReportInput): AWSJSON
+  UserApprovals(input: UserApprovalsInput): AWSJSON
+  addCreditsToUser(input: addCreditsToUserInput): AWSJSON
+  addOrRemoveQuestionToQuiz(input: addQuestionToQuizInput): AWSJSON
+  clearErrorLogs: AWSJSON
+  createCategory(input: createCategoryInput): AWSJSON
+  createQuestion(input: createQuestionInput): AWSJSON
+  createQuiz(input: createQuizInput): AWSJSON
+  createQuizarreQuizRun(input: createQuizarreQuizRunInput): AWSJSON
+  createTeam(input: createTeamInput): AWSJSON
+  createUser(input: createUserInput): AWSJSON
+  deductCreditsFromUser(input: deductCreditsFromUserInput): AWSJSON
+  editCategory(input: editCategoryInput): AWSJSON
+  editPendingReviewQuestions(input: editQuestionInput): AWSJSON
+  editQuestion(input: editQuestionInput): AWSJSON
+  editQuiz(input: editQuizInput): AWSJSON
+  editQuizRunLeaderboard(input: editQuizRunLeaderboardInput): AWSJSON
+  editQuizarreQuizRun(input: editQuizarreQuizRunInput): AWSJSON
+  editTeam(input: editTeamInput): AWSJSON
+  editTeamUsers(input: editTeamUsersInput): AWSJSON
+  editUser(input: editUserInput): AWSJSON
+  generateBulkUploadUrl(input: commons3Input): AWSJSON
+  generateS3UploadURL(input: commons3Input): AWSJSON
+  publishQuizarreQuizRun(input: publishQuizarreQuizRunInput): AWSJSON
+  reorderQuizQuestions(input: reorderQuizQuestionsInput): AWSJSON
+  resetDashboardAndReports(input: resetDashboardAndReportsInput): AWSJSON
+  terminateLiveQuizRun(quiz_run_id: String!): AWSJSON
+  updateBmsSettings(input: updateBmsSettingsInput): AWSJSON
+}
+
+type Query {
+  getCurrentUserDetails(input: getCurrentUserDetailsInput): AWSJSON
+  #  S3 UPLOAD APIs
+  getDocumentPresignedURL(input: commons3Input): AWSJSON
+  getOrganizationDetails(input: getOrganizationDetailsInput): AWSJSON
+  listApprovals(input: listApprovalsInput): AWSJSON
+  listBmsSettings: AWSJSON
+  #  BULK UPLOAD ERROR API
+  listBulkUploadErrors(input: listBulkUploadErrorsInput): AWSJSON
+  #  CATEGORY APIs
+  listCategories(input: listCategoriesInput): AWSJSON
+  listCategoryReports(input: listCategoryReportsInput): AWSJSON
+  listCreditsHistory(input: listCreditsHistoryInput): AWSJSON
+  listDeviceBrowserReports(input: listDeviceBrowserReportsInput): AWSJSON
+  listLocationReports(input: listLocationReportsInput): AWSJSON
+  #  QUESTION REVIEW APIs
+  listPendingReviewQuestions(next_token: String, organization_id: String, question_review_status: questionReviewStatusEnum!): AWSJSON
+  listQuestionReports(input: listQuestionReportsInput): AWSJSON
+  #  QUESTION APIs
+  listQuestions(input: listQuestionsInput2): AWSJSON
+  listQuizQuestions(quiz_id: String): AWSJSON @aws_api_key @aws_cognito_user_pools
+  listQuizQuestions2(input: listQuizQuestions2Input): AWSJSON
+  listQuizRunLeaderboard(input: listQuizRunLeaderboardInput): AWSJSON
+  listQuizRunReports(input: listQuizRunReportsInput): AWSJSON
+  listQuizRunValidationErrors(input: listQuizRunValidationErrorsInput): AWSJSON
+  listQuizStats(input: listQuizStatsInput): AWSJSON
+  #  QUIZZ RUNS APIs
+  listQuizarreQuizRuns(input: listQuizarreQuizRunsInput): AWSJSON
+  #  QUIZZES APIs
+  listQuizzes(input: listQuizzesInput): AWSJSON
+  listSignUpUsers(input: listSignUpUsersInput): AWSJSON
+  listTeamLeaderboard(input: listTeamLeaderboardInput): AWSJSON
+  listTeamUsers(input: listTeamUsersInput): AWSJSON
+  #  TEAMS APIs
+  listTeams(input: listTeamsInput): AWSJSON
+  listUserActivities(input: listUserActivitiesInput): AWSJSON
+  listUserQuizAttemptQuestions(input: listUserQuizAttemptQuestionsInput): AWSJSON
+  listUserQuizAttempts(input: listUserQuizAttemptsInput): AWSJSON
+  #  BMS USERS APIs
+  listUsers(input: listUserInput): AWSJSON
+  searchUser(input: searchUserInput): AWSJSON
+}
+
+enum ActionEnum {
+  DELETE
+  UPDATE
+}
+
+enum ScopeTypeEnum {
+  GLOBAL
+  TEAM
+  USER
+}
+
+enum StatusEnum {
+  ACTIVE
+  ALL
+  INACTIVE
+}
+
+enum addOrRemoveEnum {
+  ADD
+  REMOVE
+}
+
+enum approvalTypeEnum {
+  APPROVE
+  REJECT
+}
+
+enum createQuizarreQuizRunEnum {
+  NEW_CREATION
+  RE_VALIDATION
+}
+
+enum difficultyLevelEnum {
+  EASY
+  HARD
+  MEDIUM
+}
+
+enum draftedPublishedStatusEnum {
+  DRAFTED
+  PUBLISHED
+}
+
+enum editQuizarreActionEnum {
+  DELETE
+  RE_VALIDATE
+  UPDATE
+}
+
+enum leaderboardTypeEnum {
+  DAILY
+  MONTHLY
+  OVERALL
+  YEARLY
+}
+
+enum questionFormatEnum {
+  AUDIO
+  IMAGE
+  TEXT
+  VIDEO
+}
+
+enum questionReviewScheduleTypeEnum {
+  MONTHLY_REVIEW
+  YEARLY_REVIEW
+}
+
+enum questionReviewStatusEnum {
+  PENDING_MONTHLY_REVIEW
+  PENDING_YEARLY_REVIEW
+}
+
+enum questionStatusEnum {
+  ACTIVE
+  ALL
+  INACTIVE
+  PENDING_MONTHLY_REVIEW
+  PENDING_YEARLY_REVIEW
+}
+
+enum questionTypeEnum {
+  FREE_TEXT
+  MCQ
+  TRUE_OR_FALSE
+}
+
+enum quizRunStatusEnum {
+  COMPLETED
+  LIVE
+  SCHEDULED
+  TERMINATED
+  VALIDATION_PENDING
+}
+
+enum scheduleTypeEnum {
+  MONTHLY
+  YEARLY
+}
+
+input CreditsHistoryInput {
+  history_type: String
+  user_id: String
+}
+
+input EditOrganizationInput {
+  is_exam_time_based_on_questions: Boolean
+  marks_awarded_for_correct_answer: Float
+  organization_id: String!
+  organization_logo_url: String
+  organization_prefix: String
+  pass_percentage: Float!
+  payment_details: paymentDetailsInput
+  time_allocated_per_question: Float
+}
+
+input GenerateExcelReportInput {
+  CreditsHistory: CreditsHistoryInput
+  ListSignUpUsers: lsInput
+  Questions: QuestionsInput
+  QuizActivities: QuizActivitiesInput
+  QuizrunActivities: QuizrunActivitiesInput
+  Userleveldashboard: UserleveldashboardInput
+  module: String!
+  organization_id: String
+}
+
+input QuestionsInput {
+  child_category_name: String
+  from_date: Float
+  parent_category_name: String
+  question_text: String
+  team_id: String
+  to_date: Float
+}
+
+input QuizActivitiesInput {
+  quiz_id: String
+  team_id: String
+}
+
+input QuizrunActivitiesInput {
+  from_date: Float
+  quiz_id: String
+  quiz_run_id: String
+  quiz_run_name: String
+  team_id: String
+  team_name: String
+  to_date: Float
+}
+
+input UserApprovalsInput {
+  approval_type: approvalTypeEnum!
+  organization_id: String!
+  payment_paid_details: paymentPayedDetailsInput
+  team_id: String
+  user_id: String!
+}
+
+input UserleveldashboardInput {
+  end_date: Float
+  from_date: Float
+  scope_id: String!
+  scope_type: ScopeTypeEnum!
+  start_date: Float
+  team_id: String
+  to_date: Float
+  user_email_id: String
+  user_location: String
+}
+
+input addCreditsToUserInput {
+  amount: Float!
+  organization_id: String
+  user_id: String!
+}
+
+input addQuestionToQuizInput {
+  action: addOrRemoveEnum
+  organization_id: String
+  questions: [String]
+  quiz_id: String!
+}
+
+input commons3Input {
+  key: String!
+  metadata: String
+}
+
+input createCategoryInput {
+  category_name: String!
+  organization_id: String
+  parent_category_id: String
+}
+
+input createQuestionInput {
+  answer_explaination: String
+  organization_id: String
+  question_alternative_topic: String
+  question_answer: String!
+  question_category_id: String!
+  question_comments: String
+  question_description: String
+  question_difficulty_level: difficultyLevelEnum!
+  question_format: questionFormatEnum!
+  question_geography: String!
+  question_has_image: Boolean
+  question_image_url: String
+  question_is_time_neutral: Boolean
+  question_options: [String]!
+  question_review_schedule_type: scheduleTypeEnum
+  question_sub_category_id: String!
+  question_text: String!
+  question_type: questionTypeEnum!
+  question_year_of_relevance: String
+}
+
+input createQuizInput {
+  organization_id: String
+  quiz_description: String
+  quiz_image_url: String
+  quiz_name: String!
+}
+
+input createQuizarreQuizRunInput {
+  background_sound_key: String
+  deduct_credits_per_play: Boolean
+  enable_extrnal_registration_form: Boolean
+  enable_negative_marking: Boolean
+  how_much_credits_to_deduct: Float
+  marks_awarded_for_correct_answer: Float!
+  mute_sound: Boolean
+  negative_marks_to_be_deducted: Float
+  organization_id: String
+  pass_percentage: Float
+  quiz_id: String!
+  quiz_run_auto_publish_leaderboard: Boolean!
+  quiz_run_end_date: String!
+  quiz_run_end_time: String!
+  quiz_run_name: String!
+  quiz_run_question_timeout: Int
+  quiz_run_setting_for_changing_answer_after_going_back_to_previous_question: Boolean!
+  quiz_run_setting_for_changing_answer_before_moving_to_the_next_question: Boolean!
+  quiz_run_setting_for_going_back_to_previous_question: Boolean!
+  quiz_run_setting_for_is_answer_visible_after_quiz_completion: Boolean!
+  quiz_run_setting_for_reattempting_after_completion: Boolean!
+  quiz_run_setting_for_showing_answer_on_every_attempt: Boolean!
+  quiz_run_setting_for_whether_quiz_background_sound_is_enabled: Boolean!
+  quiz_run_setting_for_whether_quiz_has_timeout: Boolean!
+  quiz_run_setting_for_whether_the_quiz_questions_has_timeout: Boolean!
+  quiz_run_settings_for_enable_full_screen_mode: Boolean!
+  quiz_run_start_date: String!
+  quiz_run_start_time: String!
+  quiz_run_timeout: Int
+  reattempt_deduction: Boolean
+  show_answer_user_level: Boolean
+  team_id: String!
+}
+
+input createTeamInput {
+  allowed_email_domains: [String]
+  is_team_user_restricted: Boolean
+  organization_id: String
+  team_code: String!
+  team_contact_person_contact_number: String!
+  team_contact_person_country_code: String!
+  team_contact_person_email_id: String!
+  team_contact_person_name: String!
+  team_members: String!
+  team_name: String!
+}
+
+input createUserInput {
+  organization_id: String
+  user_email_id: String!
+}
+
+input deductCreditsFromUserInput {
+  amount: Float!
+  user_id: String!
+}
+
+input editCategoryInput {
+  action: ActionEnum!
+  category_id: String!
+  category_name: String
+  category_status: StatusEnum
+  organization_id: String
+}
+
+input editQuestionInput {
+  action: ActionEnum!
+  answer_explaination: String
+  organization_id: String
+  question_alternative_topic: String
+  question_answer: String
+  question_category_id: String
+  question_comments: String
+  question_description: String
+  question_difficulty_level: String
+  question_format: questionFormatEnum
+  question_geography: String
+  question_has_image: Boolean
+  question_id: String!
+  question_image_url: String
+  question_is_time_neutral: Boolean
+  question_options: [String]
+  question_review_schedule_type: scheduleTypeEnum
+  question_status: StatusEnum
+  question_sub_category_id: String
+  question_text: String
+  question_type: questionTypeEnum
+  question_year_of_relevance: String
+}
+
+input editQuizInput {
+  action: ActionEnum!
+  organization_id: String
+  quiz_description: String
+  quiz_id: String!
+  quiz_image_url: String
+  quiz_name: String
+  quiz_status: draftedPublishedStatusEnum
+}
+
+input editQuizRunLeaderboardInput {
+  attempt_id: String!
+  leaderboard_rank: Int!
+  organization_id: String
+}
+
+input editQuizarreQuizRunInput {
+  action: editQuizarreActionEnum
+  background_sound_key: String
+  deduct_credits_per_play: Boolean
+  how_much_credits_to_deduct: Float
+  mute_sound: Boolean
+  organization_id: String
+  quiz_id: String
+  quiz_run_auto_publish_leaderboard: Boolean
+  quiz_run_end_date: String
+  quiz_run_end_time: String
+  quiz_run_id: String!
+  quiz_run_name: String
+  quiz_run_question_timeout: Int
+  quiz_run_setting_for_changing_answer_after_going_back_to_previous_question: Boolean
+  quiz_run_setting_for_changing_answer_before_moving_to_the_next_question: Boolean
+  quiz_run_setting_for_going_back_to_previous_question: Boolean
+  quiz_run_setting_for_is_answer_visible_after_quiz_completion: Boolean
+  quiz_run_setting_for_reattempting_after_completion: Boolean
+  quiz_run_setting_for_showing_answer_on_every_attempt: Boolean
+  quiz_run_setting_for_whether_quiz_background_sound_is_enabled: Boolean
+  quiz_run_setting_for_whether_quiz_has_timeout: Boolean
+  quiz_run_setting_for_whether_the_quiz_questions_has_timeout: Boolean
+  quiz_run_settings_for_enable_full_screen_mode: Boolean
+  quiz_run_start_date: String
+  quiz_run_start_time: String
+  quiz_run_timeout: Int
+  reattempt_deduction: Boolean
+  show_answer_user_level: Boolean
+  team_id: String
+}
+
+input editTeamInput {
+  action: ActionEnum!
+  allowed_email_domains: [String]
+  is_team_user_restricted: Boolean
+  organization_id: String
+  team_code: String
+  team_contact_person_contact_number: String
+  team_contact_person_country_code: String
+  team_contact_person_email_id: String
+  team_contact_person_name: String
+  team_id: String
+  team_members: String
+  team_name: String
+  team_status: StatusEnum
+}
+
+input editTeamUsersInput {
+  organization_id: String
+  team_id: String!
+  user_id: String!
+  user_status: String!
+}
+
+input editUserInput {
+  action: ActionEnum!
+  organization_id: String
+  user_email_id: String!
+  user_status: StatusEnum
+}
+
+input getCurrentUserDetailsInput {
+  user_email_id: String!
+}
+
+input getOrganizationDetailsInput {
+  organization_id: String!
+}
+
+input listApprovalsInput {
+  approval_status: String!
+  organization_id: String!
+}
+
+input listBulkUploadErrorsInput {
+  next_token: String
+  organization_id: String
+}
+
+input listCategoriesInput {
+  category_status: StatusEnum!
+  organization_id: String
+  parent_category_id: String
+}
+
+input listCategoryReportsInput {
+  category_name: String
+  category_type: String
+  from_date: Float
+  next_token: String
+  organization_id: String
+  parent_category_name: String
+  team_id: String
+  to_date: Float
+}
+
+input listCreditsHistoryInput {
+  history_type: String
+  next_token: String
+  organization_id: String
+  user_id: String
+}
+
+input listDeviceBrowserReportsInput {
+  end_date: Float
+  organization_id: String
+  scope_id: String
+  scope_type: ScopeTypeEnum
+  start_date: Float
+  team_id: String
+}
+
+input listLocationReportsInput {
+  end_date: Float
+  organization_id: String
+  scope_id: String
+  scope_type: ScopeTypeEnum
+  start_date: Float
+  team_id: String
+}
+
+input listQuestionReportsInput {
+  category_name: String
+  from_date: Float
+  next_token: String
+  organization_id: String
+  question_text: String
+  sub_category_name: String
+  team_id: String
+  to_date: Float
+}
+
+input listQuestionsInput {
+  question_category_id: String!
+  question_status: StatusEnum!
+  question_sub_category_id: String!
+}
+
+input listQuestionsInput2 {
+  invalid_questions: Boolean
+  next_token: String
+  organization_id: String
+  question_alternative_topic: String
+  question_category_id: String
+  question_difficulty_level: difficultyLevelEnum
+  question_format: String
+  question_geography: String
+  question_sub_category_id: String
+  question_type: String
+  quiz_id: String
+}
+
+input listQuizQuestions2Input {
+  next_token: String
+  organization_id: String
+  quiz_id: String
+}
+
+input listQuizRunLeaderboardInput {
+  organization_id: String
+  quiz_run_id: String!
+}
+
+input listQuizRunReportsInput {
+  from_date: Float
+  next_token: String
+  organization_id: String
+  quiz_id: String
+  quiz_run_id: String
+  quiz_run_name: String
+  team_id: String
+  team_name: String
+  to_date: Float
+}
+
+input listQuizRunValidationErrorsInput {
+  next_token: String
+  organization_id: String
+  question_review_schedule_type: questionReviewScheduleTypeEnum
+  team_id: String!
+}
+
+input listQuizStatsInput {
+  next_token: String
+  organization_id: String
+  quiz_id: String
+  team_id: String
+}
+
+input listQuizarreQuizRunsInput {
+  organization_id: String
+  quiz_run_status: quizRunStatusEnum!
+  team_id: String
+}
+
+input listQuizzesInput {
+  organization_id: String
+  quiz_status: draftedPublishedStatusEnum!
+}
+
+input listSignUpUsersInput {
+  next_token: String
+  organization_id: String
+  team_id: String
+  user_status: String
+}
+
+input listTeamLeaderboardInput {
+  leaderboard_date: String!
+  leaderboard_month: String!
+  leaderboard_type: leaderboardTypeEnum
+  leaderboard_year: String!
+  organization_id: String
+  team_id: String!
+}
+
+input listTeamUsersInput {
+  next_token: String
+  organization_id: String
+  team_id: String!
+  user_status: StatusEnum!
+}
+
+input listTeamsInput {
+  organization_id: String
+  team_status: StatusEnum!
+}
+
+input listUserActivitiesInput {
+  from_date: Float
+  next_token: String
+  organization_id: String
+  team_id: String
+  to_date: Float
+  user_email_id: String
+  user_location: String
+}
+
+input listUserInput {
+  organization_id: String
+  user_status: StatusEnum!
+}
+
+input listUserQuizAttemptQuestionsInput {
+  attempt_id: String
+  organization_id: String
+}
+
+input listUserQuizAttemptsInput {
+  end_time: Float
+  next_token: String
+  organization_id: String
+  start_time: Float
+  team_id: String
+  user_id: String
+}
+
+input lsInput {
+  next_token: String
+  team_id: String
+}
+
+input paymentDetailsInput {
+  banking_name: String
+  qr_code_s3_key: String!
+  upi_id: String
+}
+
+input paymentPayedDetailsInput {
+  attachments: [String]
+  comments: String
+  paid_on: String
+  payment_amount: Float
+  utr_number: String
+}
+
+input publishQuizarreQuizRunInput {
+  organization_id: String
+  quiz_run_id: String!
+}
+
+input reorderQuizQuestionsInput {
+  organization_id: String
+  question_ids: AWSJSON
+  quiz_id: String
+}
+
+input resetDashboardAndReportsInput {
+  organization_id: String
+  team_id: String!
+}
+
+input searchUserInput {
+  next_token: String
+  organization_id: String
+  team_id: String
+  user_email_id: String
+  user_name: String
+}
+
+input updateBmsSettingsInput {
+  credits_plan: AWSJSON
+  user_onboard_credits: Float
+}
