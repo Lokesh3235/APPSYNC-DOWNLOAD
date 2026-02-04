@@ -76,7 +76,6 @@ type Query {
   #  BMS USERS APIs
   listUsers(input: listUserInput): AWSJSON
   searchUser(input: searchUserInput): AWSJSON
-  testCurrentUserDetails(input: getCurrentUserDetailsInput): AWSJSON
 }
 
 enum ActionEnum {
