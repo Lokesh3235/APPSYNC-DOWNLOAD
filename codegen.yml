@@ -1,0 +1,15 @@
+overwrite: true
+schema: schema.graphql
+generates:
+  queries.js:
+    plugins:
+      - javascript
+      - javascript-operations
+  mutations.js:
+    plugins:
+      - javascript
+      - javascript-operations
+  subscriptions.js:
+    plugins:
+      - javascript
+      - javascript-operations
