@@ -1,81 +1,88 @@
+scalar JSON
+scalar Date
+scalar Time
+scalar DateTime
+scalar Email
+scalar Phone
+scalar URL
 schema {
   query: Query
   mutation: Mutation
 }
 
 type Mutation {
-  EditOrganization(input: EditOrganizationInput): AWSJSON
-  GenerateExcelReport(input: GenerateExcelReportInput): AWSJSON
-  UserApprovals(input: UserApprovalsInput): AWSJSON
-  addCreditsToUser(input: addCreditsToUserInput): AWSJSON
-  addOrRemoveQuestionToQuiz(input: addQuestionToQuizInput): AWSJSON
-  clearErrorLogs: AWSJSON
-  createCategory(input: createCategoryInput): AWSJSON
-  createQuestion(input: createQuestionInput): AWSJSON
-  createQuiz(input: createQuizInput): AWSJSON
-  createQuizarreQuizRun(input: createQuizarreQuizRunInput): AWSJSON
-  createTeam(input: createTeamInput): AWSJSON
-  createUser(input: createUserInput): AWSJSON
-  deductCreditsFromUser(input: deductCreditsFromUserInput): AWSJSON
-  editCategory(input: editCategoryInput): AWSJSON
-  editPendingReviewQuestions(input: editQuestionInput): AWSJSON
-  editQuestion(input: editQuestionInput): AWSJSON
-  editQuiz(input: editQuizInput): AWSJSON
-  editQuizRunLeaderboard(input: editQuizRunLeaderboardInput): AWSJSON
-  editQuizarreQuizRun(input: editQuizarreQuizRunInput): AWSJSON
-  editTeam(input: editTeamInput): AWSJSON
-  editTeamUsers(input: editTeamUsersInput): AWSJSON
-  editUser(input: editUserInput): AWSJSON
-  generateBulkUploadUrl(input: commons3Input): AWSJSON
-  generateS3UploadURL(input: commons3Input): AWSJSON
-  publishQuizarreQuizRun(input: publishQuizarreQuizRunInput): AWSJSON
-  reorderQuizQuestions(input: reorderQuizQuestionsInput): AWSJSON
-  resetDashboardAndReports(input: resetDashboardAndReportsInput): AWSJSON
-  terminateLiveQuizRun(quiz_run_id: String!): AWSJSON
-  updateBmsSettings(input: updateBmsSettingsInput): AWSJSON
+  EditOrganization(input: EditOrganizationInput): JSON
+  GenerateExcelReport(input: GenerateExcelReportInput): JSON
+  UserApprovals(input: UserApprovalsInput): JSON
+  addCreditsToUser(input: addCreditsToUserInput): JSON
+  addOrRemoveQuestionToQuiz(input: addQuestionToQuizInput): JSON
+  clearErrorLogs: JSON
+  createCategory(input: createCategoryInput): JSON
+  createQuestion(input: createQuestionInput): JSON
+  createQuiz(input: createQuizInput): JSON
+  createQuizarreQuizRun(input: createQuizarreQuizRunInput): JSON
+  createTeam(input: createTeamInput): JSON
+  createUser(input: createUserInput): JSON
+  deductCreditsFromUser(input: deductCreditsFromUserInput): JSON
+  editCategory(input: editCategoryInput): JSON
+  editPendingReviewQuestions(input: editQuestionInput): JSON
+  editQuestion(input: editQuestionInput): JSON
+  editQuiz(input: editQuizInput): JSON
+  editQuizRunLeaderboard(input: editQuizRunLeaderboardInput): JSON
+  editQuizarreQuizRun(input: editQuizarreQuizRunInput): JSON
+  editTeam(input: editTeamInput): JSON
+  editTeamUsers(input: editTeamUsersInput): JSON
+  editUser(input: editUserInput): JSON
+  generateBulkUploadUrl(input: commons3Input): JSON
+  generateS3UploadURL(input: commons3Input): JSON
+  publishQuizarreQuizRun(input: publishQuizarreQuizRunInput): JSON
+  reorderQuizQuestions(input: reorderQuizQuestionsInput): JSON
+  resetDashboardAndReports(input: resetDashboardAndReportsInput): JSON
+  terminateLiveQuizRun(quiz_run_id: String!): JSON
+  updateBmsSettings(input: updateBmsSettingsInput): JSON
 }
 
 type Query {
-  getCurrentUserDetails(input: getCurrentUserDetailsInput): AWSJSON
+  getCurrentUserDetails(input: getCurrentUserDetailsInput): JSON
   #  S3 UPLOAD APIs
-  getDocumentPresignedURL(input: commons3Input): AWSJSON
-  getOrganizationDetails(input: getOrganizationDetailsInput): AWSJSON
-  listApprovals(input: listApprovalsInput): AWSJSON
-  listBmsSettings: AWSJSON
+  getDocumentPresignedURL(input: commons3Input): JSON
+  getOrganizationDetails(input: getOrganizationDetailsInput): JSON
+  listApprovals(input: listApprovalsInput): JSON
+  listBmsSettings: JSON
   #  BULK UPLOAD ERROR API
-  listBulkUploadErrors(input: listBulkUploadErrorsInput): AWSJSON
+  listBulkUploadErrors(input: listBulkUploadErrorsInput): JSON
   #  CATEGORY APIs
-  listCategories(input: listCategoriesInput): AWSJSON
-  listCategoryReports(input: listCategoryReportsInput): AWSJSON
-  listCreditsHistory(input: listCreditsHistoryInput): AWSJSON
-  listDeviceBrowserReports(input: listDeviceBrowserReportsInput): AWSJSON
-  listLocationReports(input: listLocationReportsInput): AWSJSON
+  listCategories(input: listCategoriesInput): JSON
+  listCategoryReports(input: listCategoryReportsInput): JSON
+  listCreditsHistory(input: listCreditsHistoryInput): JSON
+  listDeviceBrowserReports(input: listDeviceBrowserReportsInput): JSON
+  listLocationReports(input: listLocationReportsInput): JSON
   #  QUESTION REVIEW APIs
-  listPendingReviewQuestions(next_token: String, organization_id: String, question_review_status: questionReviewStatusEnum!): AWSJSON
-  listQuestionReports(input: listQuestionReportsInput): AWSJSON
+  listPendingReviewQuestions(next_token: String, organization_id: String, question_review_status: questionReviewStatusEnum!): JSON
+  listQuestionReports(input: listQuestionReportsInput): JSON
   #  QUESTION APIs
-  listQuestions(input: listQuestionsInput2): AWSJSON
-  listQuizQuestions(quiz_id: String): AWSJSON @aws_api_key @aws_cognito_user_pools
-  listQuizQuestions2(input: listQuizQuestions2Input): AWSJSON
-  listQuizRunLeaderboard(input: listQuizRunLeaderboardInput): AWSJSON
-  listQuizRunReports(input: listQuizRunReportsInput): AWSJSON
-  listQuizRunValidationErrors(input: listQuizRunValidationErrorsInput): AWSJSON
-  listQuizStats(input: listQuizStatsInput): AWSJSON
+  listQuestions(input: listQuestionsInput2): JSON
+  listQuizQuestions(quiz_id: String): JSON @aws_api_key @aws_cognito_user_pools
+  listQuizQuestions2(input: listQuizQuestions2Input): JSON
+  listQuizRunLeaderboard(input: listQuizRunLeaderboardInput): JSON
+  listQuizRunReports(input: listQuizRunReportsInput): JSON
+  listQuizRunValidationErrors(input: listQuizRunValidationErrorsInput): JSON
+  listQuizStats(input: listQuizStatsInput): JSON
   #  QUIZZ RUNS APIs
-  listQuizarreQuizRuns(input: listQuizarreQuizRunsInput): AWSJSON
+  listQuizarreQuizRuns(input: listQuizarreQuizRunsInput): JSON
   #  QUIZZES APIs
-  listQuizzes(input: listQuizzesInput): AWSJSON
-  listSignUpUsers(input: listSignUpUsersInput): AWSJSON
-  listTeamLeaderboard(input: listTeamLeaderboardInput): AWSJSON
-  listTeamUsers(input: listTeamUsersInput): AWSJSON
+  listQuizzes(input: listQuizzesInput): JSON
+  listSignUpUsers(input: listSignUpUsersInput): JSON
+  listTeamLeaderboard(input: listTeamLeaderboardInput): JSON
+  listTeamUsers(input: listTeamUsersInput): JSON
   #  TEAMS APIs
-  listTeams(input: listTeamsInput): AWSJSON
-  listUserActivities(input: listUserActivitiesInput): AWSJSON
-  listUserQuizAttemptQuestions(input: listUserQuizAttemptQuestionsInput): AWSJSON
-  listUserQuizAttempts(input: listUserQuizAttemptsInput): AWSJSON
+  listTeams(input: listTeamsInput): JSON
+  listUserActivities(input: listUserActivitiesInput): JSON
+  listUserQuizAttemptQuestions(input: listUserQuizAttemptQuestionsInput): JSON
+  listUserQuizAttempts(input: listUserQuizAttemptsInput): JSON
   #  BMS USERS APIs
-  listUsers(input: listUserInput): AWSJSON
-  searchUser(input: searchUserInput): AWSJSON
+  listUsers(input: listUserInput): JSON
+  searchUser(input: searchUserInput): JSON
 }
 
 enum ActionEnum {
@@ -693,7 +700,7 @@ input publishQuizarreQuizRunInput {
 
 input reorderQuizQuestionsInput {
   organization_id: String
-  question_ids: AWSJSON
+  question_ids: JSON
   quiz_id: String
 }
 
@@ -711,6 +718,6 @@ input searchUserInput {
 }
 
 input updateBmsSettingsInput {
-  credits_plan: AWSJSON
+  credits_plan: JSON
   user_onboard_credits: Float
 }
