@@ -1,20 +1,20 @@
-mutation EditOrganization($input: EditOrganizationInput) {
+mutation EditOrganization($input: [object Object]) {
   EditOrganization(input: $input)
 }
 
-mutation GenerateExcelReport($input: GenerateExcelReportInput) {
+mutation GenerateExcelReport($input: [object Object]) {
   GenerateExcelReport(input: $input)
 }
 
-mutation UserApprovals($input: UserApprovalsInput) {
+mutation UserApprovals($input: [object Object]) {
   UserApprovals(input: $input)
 }
 
-mutation AddCreditsToUser($input: addCreditsToUserInput) {
+mutation AddCreditsToUser($input: [object Object]) {
   addCreditsToUser(input: $input)
 }
 
-mutation AddOrRemoveQuestionToQuiz($input: addQuestionToQuizInput) {
+mutation AddOrRemoveQuestionToQuiz($input: [object Object]) {
   addOrRemoveQuestionToQuiz(input: $input)
 }
 
@@ -22,94 +22,94 @@ mutation ClearErrorLogs {
   clearErrorLogs
 }
 
-mutation CreateCategory($input: createCategoryInput) {
+mutation CreateCategory($input: [object Object]) {
   createCategory(input: $input)
 }
 
-mutation CreateQuestion($input: createQuestionInput) {
+mutation CreateQuestion($input: [object Object]) {
   createQuestion(input: $input)
 }
 
-mutation CreateQuiz($input: createQuizInput) {
+mutation CreateQuiz($input: [object Object]) {
   createQuiz(input: $input)
 }
 
-mutation CreateQuizarreQuizRun($input: createQuizarreQuizRunInput) {
+mutation CreateQuizarreQuizRun($input: [object Object]) {
   createQuizarreQuizRun(input: $input)
 }
 
-mutation CreateTeam($input: createTeamInput) {
+mutation CreateTeam($input: [object Object]) {
   createTeam(input: $input)
 }
 
-mutation CreateUser($input: createUserInput) {
+mutation CreateUser($input: [object Object]) {
   createUser(input: $input)
 }
 
-mutation DeductCreditsFromUser($input: deductCreditsFromUserInput) {
+mutation DeductCreditsFromUser($input: [object Object]) {
   deductCreditsFromUser(input: $input)
 }
 
-mutation EditCategory($input: editCategoryInput) {
+mutation EditCategory($input: [object Object]) {
   editCategory(input: $input)
 }
 
-mutation EditPendingReviewQuestions($input: editQuestionInput) {
+mutation EditPendingReviewQuestions($input: [object Object]) {
   editPendingReviewQuestions(input: $input)
 }
 
-mutation EditQuestion($input: editQuestionInput) {
+mutation EditQuestion($input: [object Object]) {
   editQuestion(input: $input)
 }
 
-mutation EditQuiz($input: editQuizInput) {
+mutation EditQuiz($input: [object Object]) {
   editQuiz(input: $input)
 }
 
-mutation EditQuizRunLeaderboard($input: editQuizRunLeaderboardInput) {
+mutation EditQuizRunLeaderboard($input: [object Object]) {
   editQuizRunLeaderboard(input: $input)
 }
 
-mutation EditQuizarreQuizRun($input: editQuizarreQuizRunInput) {
+mutation EditQuizarreQuizRun($input: [object Object]) {
   editQuizarreQuizRun(input: $input)
 }
 
-mutation EditTeam($input: editTeamInput) {
+mutation EditTeam($input: [object Object]) {
   editTeam(input: $input)
 }
 
-mutation EditTeamUsers($input: editTeamUsersInput) {
+mutation EditTeamUsers($input: [object Object]) {
   editTeamUsers(input: $input)
 }
 
-mutation EditUser($input: editUserInput) {
+mutation EditUser($input: [object Object]) {
   editUser(input: $input)
 }
 
-mutation GenerateBulkUploadUrl($input: commons3Input) {
+mutation GenerateBulkUploadUrl($input: [object Object]) {
   generateBulkUploadUrl(input: $input)
 }
 
-mutation GenerateS3UploadURL($input: commons3Input) {
+mutation GenerateS3UploadURL($input: [object Object]) {
   generateS3UploadURL(input: $input)
 }
 
-mutation PublishQuizarreQuizRun($input: publishQuizarreQuizRunInput) {
+mutation PublishQuizarreQuizRun($input: [object Object]) {
   publishQuizarreQuizRun(input: $input)
 }
 
-mutation ReorderQuizQuestions($input: reorderQuizQuestionsInput) {
+mutation ReorderQuizQuestions($input: [object Object]) {
   reorderQuizQuestions(input: $input)
 }
 
-mutation ResetDashboardAndReports($input: resetDashboardAndReportsInput) {
+mutation ResetDashboardAndReports($input: [object Object]) {
   resetDashboardAndReports(input: $input)
 }
 
-mutation TerminateLiveQuizRun($quiz_run_id: String!) {
+mutation TerminateLiveQuizRun($quiz_run_id: [object Object]) {
   terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
 }
 
-mutation UpdateBmsSettings($input: updateBmsSettingsInput) {
+mutation UpdateBmsSettings($input: [object Object]) {
   updateBmsSettings(input: $input)
 }
