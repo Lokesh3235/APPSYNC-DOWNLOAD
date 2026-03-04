@@ -1,239 +1,239 @@
-query GetCurrentUserDetails($input: [object Object]) {
-  getCurrentUserDetails(input: $input)
-}
+  query GetCurrentUserDetails($input: [object Object]) {
+    getCurrentUserDetails(input: $input)
+  }
 
-query GetDocumentPresignedURL($input: [object Object]) {
-  getDocumentPresignedURL(input: $input)
-}
+  query GetDocumentPresignedURL($input: [object Object]) {
+    getDocumentPresignedURL(input: $input)
+  }
 
-query GetOrganizationDetails($input: [object Object]) {
-  getOrganizationDetails(input: $input)
-}
+  query GetOrganizationDetails($input: [object Object]) {
+    getOrganizationDetails(input: $input)
+  }
 
-query ListApprovals($input: [object Object]) {
-  listApprovals(input: $input)
-}
+  query ListApprovals($input: [object Object]) {
+    listApprovals(input: $input)
+  }
 
-query ListBmsSettings {
-  listBmsSettings
-}
+  query ListBmsSettings {
+    listBmsSettings
+  }
 
-query ListBulkUploadErrors($input: [object Object]) {
-  listBulkUploadErrors(input: $input)
-}
+  query ListBulkUploadErrors($input: [object Object]) {
+    listBulkUploadErrors(input: $input)
+  }
 
-query ListCategories($input: [object Object]) {
-  listCategories(input: $input)
-}
+  query ListCategories($input: [object Object]) {
+    listCategories(input: $input)
+  }
 
-query ListCategoryReports($input: [object Object]) {
-  listCategoryReports(input: $input)
-}
+  query ListCategoryReports($input: [object Object]) {
+    listCategoryReports(input: $input)
+  }
 
-query ListCreditsHistory($input: [object Object]) {
-  listCreditsHistory(input: $input)
-}
+  query ListCreditsHistory($input: [object Object]) {
+    listCreditsHistory(input: $input)
+  }
 
-query ListDeviceBrowserReports($input: [object Object]) {
-  listDeviceBrowserReports(input: $input)
-}
+  query ListDeviceBrowserReports($input: [object Object]) {
+    listDeviceBrowserReports(input: $input)
+  }
 
-query ListLocationReports($input: [object Object]) {
-  listLocationReports(input: $input)
-}
+  query ListLocationReports($input: [object Object]) {
+    listLocationReports(input: $input)
+  }
 
-query ListPendingReviewQuestions($next_token: [object Object], $organization_id: [object Object], $question_review_status: [object Object]) {
-  listPendingReviewQuestions(next_token: $next_token, organization_id: $organization_id, question_review_status: $question_review_status)
-}
+  query ListPendingReviewQuestions($next_token: [object Object], $organization_id: [object Object], $question_review_status: [object Object]) {
+    listPendingReviewQuestions(next_token: $next_token, organization_id: $organization_id, question_review_status: $question_review_status)
+  }
 
-query ListQuestionReports($input: [object Object]) {
-  listQuestionReports(input: $input)
-}
+  query ListQuestionReports($input: [object Object]) {
+    listQuestionReports(input: $input)
+  }
 
-query ListQuestions($input: [object Object]) {
-  listQuestions(input: $input)
-}
+  query ListQuestions($input: [object Object]) {
+    listQuestions(input: $input)
+  }
 
-query ListQuizQuestions($quiz_id: [object Object]) {
-  listQuizQuestions(quiz_id: $quiz_id)
-}
+  query ListQuizQuestions($quiz_id: [object Object]) {
+    listQuizQuestions(quiz_id: $quiz_id)
+  }
 
-query ListQuizQuestions2($input: [object Object]) {
-  listQuizQuestions2(input: $input)
-}
+  query ListQuizQuestions2($input: [object Object]) {
+    listQuizQuestions2(input: $input)
+  }
 
-query ListQuizRunLeaderboard($input: [object Object]) {
-  listQuizRunLeaderboard(input: $input)
-}
+  query ListQuizRunLeaderboard($input: [object Object]) {
+    listQuizRunLeaderboard(input: $input)
+  }
 
-query ListQuizRunReports($input: [object Object]) {
-  listQuizRunReports(input: $input)
-}
+  query ListQuizRunReports($input: [object Object]) {
+    listQuizRunReports(input: $input)
+  }
 
-query ListQuizRunValidationErrors($input: [object Object]) {
-  listQuizRunValidationErrors(input: $input)
-}
+  query ListQuizRunValidationErrors($input: [object Object]) {
+    listQuizRunValidationErrors(input: $input)
+  }
 
-query ListQuizStats($input: [object Object]) {
-  listQuizStats(input: $input)
-}
+  query ListQuizStats($input: [object Object]) {
+    listQuizStats(input: $input)
+  }
 
-query ListQuizarreQuizRuns($input: [object Object]) {
-  listQuizarreQuizRuns(input: $input)
-}
+  query ListQuizarreQuizRuns($input: [object Object]) {
+    listQuizarreQuizRuns(input: $input)
+  }
 
-query ListQuizzes($input: [object Object]) {
-  listQuizzes(input: $input)
-}
+  query ListQuizzes($input: [object Object]) {
+    listQuizzes(input: $input)
+  }
 
-query ListSignUpUsers($input: [object Object]) {
-  listSignUpUsers(input: $input)
-}
+  query ListSignUpUsers($input: [object Object]) {
+    listSignUpUsers(input: $input)
+  }
 
-query ListTeamLeaderboard($input: [object Object]) {
-  listTeamLeaderboard(input: $input)
-}
+  query ListTeamLeaderboard($input: [object Object]) {
+    listTeamLeaderboard(input: $input)
+  }
 
-query ListTeamUsers($input: [object Object]) {
-  listTeamUsers(input: $input)
-}
+  query ListTeamUsers($input: [object Object]) {
+    listTeamUsers(input: $input)
+  }
 
-query ListTeams($input: [object Object]) {
-  listTeams(input: $input)
-}
+  query ListTeams($input: [object Object]) {
+    listTeams(input: $input)
+  }
 
-query ListUserActivities($input: [object Object]) {
-  listUserActivities(input: $input)
-}
+  query ListUserActivities($input: [object Object]) {
+    listUserActivities(input: $input)
+  }
 
-query ListUserQuizAttemptQuestions($input: [object Object]) {
-  listUserQuizAttemptQuestions(input: $input)
-}
+  query ListUserQuizAttemptQuestions($input: [object Object]) {
+    listUserQuizAttemptQuestions(input: $input)
+  }
 
-query ListUserQuizAttempts($input: [object Object]) {
-  listUserQuizAttempts(input: $input)
-}
+  query ListUserQuizAttempts($input: [object Object]) {
+    listUserQuizAttempts(input: $input)
+  }
 
-query ListUsers($input: [object Object]) {
-  listUsers(input: $input)
-}
+  query ListUsers($input: [object Object]) {
+    listUsers(input: $input)
+  }
 
-query SearchUser($input: [object Object]) {
-  searchUser(input: $input)
-}
+  query SearchUser($input: [object Object]) {
+    searchUser(input: $input)
+  }
 
-mutation EditOrganization($input: [object Object]) {
-  EditOrganization(input: $input)
-}
+  mutation EditOrganization($input: [object Object]) {
+    EditOrganization(input: $input)
+  }
 
-mutation GenerateExcelReport($input: [object Object]) {
-  GenerateExcelReport(input: $input)
-}
+  mutation GenerateExcelReport($input: [object Object]) {
+    GenerateExcelReport(input: $input)
+  }
 
-mutation UserApprovals($input: [object Object]) {
-  UserApprovals(input: $input)
-}
+  mutation UserApprovals($input: [object Object]) {
+    UserApprovals(input: $input)
+  }
 
-mutation AddCreditsToUser($input: [object Object]) {
-  addCreditsToUser(input: $input)
-}
+  mutation AddCreditsToUser($input: [object Object]) {
+    addCreditsToUser(input: $input)
+  }
 
-mutation AddOrRemoveQuestionToQuiz($input: [object Object]) {
-  addOrRemoveQuestionToQuiz(input: $input)
-}
+  mutation AddOrRemoveQuestionToQuiz($input: [object Object]) {
+    addOrRemoveQuestionToQuiz(input: $input)
+  }
 
-mutation ClearErrorLogs {
-  clearErrorLogs
-}
+  mutation ClearErrorLogs {
+    clearErrorLogs
+  }
 
-mutation CreateCategory($input: [object Object]) {
-  createCategory(input: $input)
-}
+  mutation CreateCategory($input: [object Object]) {
+    createCategory(input: $input)
+  }
 
-mutation CreateQuestion($input: [object Object]) {
-  createQuestion(input: $input)
-}
+  mutation CreateQuestion($input: [object Object]) {
+    createQuestion(input: $input)
+  }
 
-mutation CreateQuiz($input: [object Object]) {
-  createQuiz(input: $input)
-}
+  mutation CreateQuiz($input: [object Object]) {
+    createQuiz(input: $input)
+  }
 
-mutation CreateQuizarreQuizRun($input: [object Object]) {
-  createQuizarreQuizRun(input: $input)
-}
+  mutation CreateQuizarreQuizRun($input: [object Object]) {
+    createQuizarreQuizRun(input: $input)
+  }
 
-mutation CreateTeam($input: [object Object]) {
-  createTeam(input: $input)
-}
+  mutation CreateTeam($input: [object Object]) {
+    createTeam(input: $input)
+  }
 
-mutation CreateUser($input: [object Object]) {
-  createUser(input: $input)
-}
+  mutation CreateUser($input: [object Object]) {
+    createUser(input: $input)
+  }
 
-mutation DeductCreditsFromUser($input: [object Object]) {
-  deductCreditsFromUser(input: $input)
-}
+  mutation DeductCreditsFromUser($input: [object Object]) {
+    deductCreditsFromUser(input: $input)
+  }
 
-mutation EditCategory($input: [object Object]) {
-  editCategory(input: $input)
-}
+  mutation EditCategory($input: [object Object]) {
+    editCategory(input: $input)
+  }
 
-mutation EditPendingReviewQuestions($input: [object Object]) {
-  editPendingReviewQuestions(input: $input)
-}
+  mutation EditPendingReviewQuestions($input: [object Object]) {
+    editPendingReviewQuestions(input: $input)
+  }
 
-mutation EditQuestion($input: [object Object]) {
-  editQuestion(input: $input)
-}
+  mutation EditQuestion($input: [object Object]) {
+    editQuestion(input: $input)
+  }
 
-mutation EditQuiz($input: [object Object]) {
-  editQuiz(input: $input)
-}
+  mutation EditQuiz($input: [object Object]) {
+    editQuiz(input: $input)
+  }
 
-mutation EditQuizRunLeaderboard($input: [object Object]) {
-  editQuizRunLeaderboard(input: $input)
-}
+  mutation EditQuizRunLeaderboard($input: [object Object]) {
+    editQuizRunLeaderboard(input: $input)
+  }
 
-mutation EditQuizarreQuizRun($input: [object Object]) {
-  editQuizarreQuizRun(input: $input)
-}
+  mutation EditQuizarreQuizRun($input: [object Object]) {
+    editQuizarreQuizRun(input: $input)
+  }
 
-mutation EditTeam($input: [object Object]) {
-  editTeam(input: $input)
-}
+  mutation EditTeam($input: [object Object]) {
+    editTeam(input: $input)
+  }
 
-mutation EditTeamUsers($input: [object Object]) {
-  editTeamUsers(input: $input)
-}
+  mutation EditTeamUsers($input: [object Object]) {
+    editTeamUsers(input: $input)
+  }
 
-mutation EditUser($input: [object Object]) {
-  editUser(input: $input)
-}
+  mutation EditUser($input: [object Object]) {
+    editUser(input: $input)
+  }
 
-mutation GenerateBulkUploadUrl($input: [object Object]) {
-  generateBulkUploadUrl(input: $input)
-}
+  mutation GenerateBulkUploadUrl($input: [object Object]) {
+    generateBulkUploadUrl(input: $input)
+  }
 
-mutation GenerateS3UploadURL($input: [object Object]) {
-  generateS3UploadURL(input: $input)
-}
+  mutation GenerateS3UploadURL($input: [object Object]) {
+    generateS3UploadURL(input: $input)
+  }
 
-mutation PublishQuizarreQuizRun($input: [object Object]) {
-  publishQuizarreQuizRun(input: $input)
-}
+  mutation PublishQuizarreQuizRun($input: [object Object]) {
+    publishQuizarreQuizRun(input: $input)
+  }
 
-mutation ReorderQuizQuestions($input: [object Object]) {
-  reorderQuizQuestions(input: $input)
-}
+  mutation ReorderQuizQuestions($input: [object Object]) {
+    reorderQuizQuestions(input: $input)
+  }
 
-mutation ResetDashboardAndReports($input: [object Object]) {
-  resetDashboardAndReports(input: $input)
-}
+  mutation ResetDashboardAndReports($input: [object Object]) {
+    resetDashboardAndReports(input: $input)
+  }
 
-mutation TerminateLiveQuizRun($quiz_run_id: [object Object]) {
-  terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
-}
+  mutation TerminateLiveQuizRun($quiz_run_id: [object Object]) {
+    terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
+  }
 
-mutation UpdateBmsSettings($input: [object Object]) {
-  updateBmsSettings(input: $input)
-}
+  mutation UpdateBmsSettings($input: [object Object]) {
+    updateBmsSettings(input: $input)
+  }
