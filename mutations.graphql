@@ -1,20 +1,20 @@
-  mutation EditOrganization($input: [object Object]) {
+  mutation EditOrganization($input: EditOrganizationInput) {
     EditOrganization(input: $input)
   }
 
-  mutation GenerateExcelReport($input: [object Object]) {
+  mutation GenerateExcelReport($input: GenerateExcelReportInput) {
     GenerateExcelReport(input: $input)
   }
 
-  mutation UserApprovals($input: [object Object]) {
+  mutation UserApprovals($input: UserApprovalsInput) {
     UserApprovals(input: $input)
   }
 
-  mutation AddCreditsToUser($input: [object Object]) {
+  mutation AddCreditsToUser($input: addCreditsToUserInput) {
     addCreditsToUser(input: $input)
   }
 
-  mutation AddOrRemoveQuestionToQuiz($input: [object Object]) {
+  mutation AddOrRemoveQuestionToQuiz($input: addQuestionToQuizInput) {
     addOrRemoveQuestionToQuiz(input: $input)
   }
 
@@ -22,94 +22,94 @@
     clearErrorLogs
   }
 
-  mutation CreateCategory($input: [object Object]) {
+  mutation CreateCategory($input: createCategoryInput) {
     createCategory(input: $input)
   }
 
-  mutation CreateQuestion($input: [object Object]) {
+  mutation CreateQuestion($input: createQuestionInput) {
     createQuestion(input: $input)
   }
 
-  mutation CreateQuiz($input: [object Object]) {
+  mutation CreateQuiz($input: createQuizInput) {
     createQuiz(input: $input)
   }
 
-  mutation CreateQuizarreQuizRun($input: [object Object]) {
+  mutation CreateQuizarreQuizRun($input: createQuizarreQuizRunInput) {
     createQuizarreQuizRun(input: $input)
   }
 
-  mutation CreateTeam($input: [object Object]) {
+  mutation CreateTeam($input: createTeamInput) {
     createTeam(input: $input)
   }
 
-  mutation CreateUser($input: [object Object]) {
+  mutation CreateUser($input: createUserInput) {
     createUser(input: $input)
   }
 
-  mutation DeductCreditsFromUser($input: [object Object]) {
+  mutation DeductCreditsFromUser($input: deductCreditsFromUserInput) {
     deductCreditsFromUser(input: $input)
   }
 
-  mutation EditCategory($input: [object Object]) {
+  mutation EditCategory($input: editCategoryInput) {
     editCategory(input: $input)
   }
 
-  mutation EditPendingReviewQuestions($input: [object Object]) {
+  mutation EditPendingReviewQuestions($input: editQuestionInput) {
     editPendingReviewQuestions(input: $input)
   }
 
-  mutation EditQuestion($input: [object Object]) {
+  mutation EditQuestion($input: editQuestionInput) {
     editQuestion(input: $input)
   }
 
-  mutation EditQuiz($input: [object Object]) {
+  mutation EditQuiz($input: editQuizInput) {
     editQuiz(input: $input)
   }
 
-  mutation EditQuizRunLeaderboard($input: [object Object]) {
+  mutation EditQuizRunLeaderboard($input: editQuizRunLeaderboardInput) {
     editQuizRunLeaderboard(input: $input)
   }
 
-  mutation EditQuizarreQuizRun($input: [object Object]) {
+  mutation EditQuizarreQuizRun($input: editQuizarreQuizRunInput) {
     editQuizarreQuizRun(input: $input)
   }
 
-  mutation EditTeam($input: [object Object]) {
+  mutation EditTeam($input: editTeamInput) {
     editTeam(input: $input)
   }
 
-  mutation EditTeamUsers($input: [object Object]) {
+  mutation EditTeamUsers($input: editTeamUsersInput) {
     editTeamUsers(input: $input)
   }
 
-  mutation EditUser($input: [object Object]) {
+  mutation EditUser($input: editUserInput) {
     editUser(input: $input)
   }
 
-  mutation GenerateBulkUploadUrl($input: [object Object]) {
+  mutation GenerateBulkUploadUrl($input: commons3Input) {
     generateBulkUploadUrl(input: $input)
   }
 
-  mutation GenerateS3UploadURL($input: [object Object]) {
+  mutation GenerateS3UploadURL($input: commons3Input) {
     generateS3UploadURL(input: $input)
   }
 
-  mutation PublishQuizarreQuizRun($input: [object Object]) {
+  mutation PublishQuizarreQuizRun($input: publishQuizarreQuizRunInput) {
     publishQuizarreQuizRun(input: $input)
   }
 
-  mutation ReorderQuizQuestions($input: [object Object]) {
+  mutation ReorderQuizQuestions($input: reorderQuizQuestionsInput) {
     reorderQuizQuestions(input: $input)
   }
 
-  mutation ResetDashboardAndReports($input: [object Object]) {
+  mutation ResetDashboardAndReports($input: resetDashboardAndReportsInput) {
     resetDashboardAndReports(input: $input)
   }
 
-  mutation TerminateLiveQuizRun($quiz_run_id: [object Object]) {
+  mutation TerminateLiveQuizRun($quiz_run_id: String!) {
     terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
   }
 
-  mutation UpdateBmsSettings($input: [object Object]) {
+  mutation UpdateBmsSettings($input: updateBmsSettingsInput) {
     updateBmsSettings(input: $input)
   }

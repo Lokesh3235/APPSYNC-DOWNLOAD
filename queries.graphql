@@ -1,16 +1,16 @@
-  query GetCurrentUserDetails($input: [object Object]) {
+  query GetCurrentUserDetails($input: getCurrentUserDetailsInput) {
     getCurrentUserDetails(input: $input)
   }
 
-  query GetDocumentPresignedURL($input: [object Object]) {
+  query GetDocumentPresignedURL($input: commons3Input) {
     getDocumentPresignedURL(input: $input)
   }
 
-  query GetOrganizationDetails($input: [object Object]) {
+  query GetOrganizationDetails($input: getOrganizationDetailsInput) {
     getOrganizationDetails(input: $input)
   }
 
-  query ListApprovals($input: [object Object]) {
+  query ListApprovals($input: listApprovalsInput) {
     listApprovals(input: $input)
   }
 
@@ -18,106 +18,106 @@
     listBmsSettings
   }
 
-  query ListBulkUploadErrors($input: [object Object]) {
+  query ListBulkUploadErrors($input: listBulkUploadErrorsInput) {
     listBulkUploadErrors(input: $input)
   }
 
-  query ListCategories($input: [object Object]) {
+  query ListCategories($input: listCategoriesInput) {
     listCategories(input: $input)
   }
 
-  query ListCategoryReports($input: [object Object]) {
+  query ListCategoryReports($input: listCategoryReportsInput) {
     listCategoryReports(input: $input)
   }
 
-  query ListCreditsHistory($input: [object Object]) {
+  query ListCreditsHistory($input: listCreditsHistoryInput) {
     listCreditsHistory(input: $input)
   }
 
-  query ListDeviceBrowserReports($input: [object Object]) {
+  query ListDeviceBrowserReports($input: listDeviceBrowserReportsInput) {
     listDeviceBrowserReports(input: $input)
   }
 
-  query ListLocationReports($input: [object Object]) {
+  query ListLocationReports($input: listLocationReportsInput) {
     listLocationReports(input: $input)
   }
 
-  query ListPendingReviewQuestions($next_token: [object Object], $organization_id: [object Object], $question_review_status: [object Object]) {
+  query ListPendingReviewQuestions($next_token: String, $organization_id: String, $question_review_status: questionReviewStatusEnum!) {
     listPendingReviewQuestions(next_token: $next_token, organization_id: $organization_id, question_review_status: $question_review_status)
   }
 
-  query ListQuestionReports($input: [object Object]) {
+  query ListQuestionReports($input: listQuestionReportsInput) {
     listQuestionReports(input: $input)
   }
 
-  query ListQuestions($input: [object Object]) {
+  query ListQuestions($input: listQuestionsInput2) {
     listQuestions(input: $input)
   }
 
-  query ListQuizQuestions($quiz_id: [object Object]) {
+  query ListQuizQuestions($quiz_id: String) {
     listQuizQuestions(quiz_id: $quiz_id)
   }
 
-  query ListQuizQuestions2($input: [object Object]) {
+  query ListQuizQuestions2($input: listQuizQuestions2Input) {
     listQuizQuestions2(input: $input)
   }
 
-  query ListQuizRunLeaderboard($input: [object Object]) {
+  query ListQuizRunLeaderboard($input: listQuizRunLeaderboardInput) {
     listQuizRunLeaderboard(input: $input)
   }
 
-  query ListQuizRunReports($input: [object Object]) {
+  query ListQuizRunReports($input: listQuizRunReportsInput) {
     listQuizRunReports(input: $input)
   }
 
-  query ListQuizRunValidationErrors($input: [object Object]) {
+  query ListQuizRunValidationErrors($input: listQuizRunValidationErrorsInput) {
     listQuizRunValidationErrors(input: $input)
   }
 
-  query ListQuizStats($input: [object Object]) {
+  query ListQuizStats($input: listQuizStatsInput) {
     listQuizStats(input: $input)
   }
 
-  query ListQuizarreQuizRuns($input: [object Object]) {
+  query ListQuizarreQuizRuns($input: listQuizarreQuizRunsInput) {
     listQuizarreQuizRuns(input: $input)
   }
 
-  query ListQuizzes($input: [object Object]) {
+  query ListQuizzes($input: listQuizzesInput) {
     listQuizzes(input: $input)
   }
 
-  query ListSignUpUsers($input: [object Object]) {
+  query ListSignUpUsers($input: listSignUpUsersInput) {
     listSignUpUsers(input: $input)
   }
 
-  query ListTeamLeaderboard($input: [object Object]) {
+  query ListTeamLeaderboard($input: listTeamLeaderboardInput) {
     listTeamLeaderboard(input: $input)
   }
 
-  query ListTeamUsers($input: [object Object]) {
+  query ListTeamUsers($input: listTeamUsersInput) {
     listTeamUsers(input: $input)
   }
 
-  query ListTeams($input: [object Object]) {
+  query ListTeams($input: listTeamsInput) {
     listTeams(input: $input)
   }
 
-  query ListUserActivities($input: [object Object]) {
+  query ListUserActivities($input: listUserActivitiesInput) {
     listUserActivities(input: $input)
   }
 
-  query ListUserQuizAttemptQuestions($input: [object Object]) {
+  query ListUserQuizAttemptQuestions($input: listUserQuizAttemptQuestionsInput) {
     listUserQuizAttemptQuestions(input: $input)
   }
 
-  query ListUserQuizAttempts($input: [object Object]) {
+  query ListUserQuizAttempts($input: listUserQuizAttemptsInput) {
     listUserQuizAttempts(input: $input)
   }
 
-  query ListUsers($input: [object Object]) {
+  query ListUsers($input: listUserInput) {
     listUsers(input: $input)
   }
 
-  query SearchUser($input: [object Object]) {
+  query SearchUser($input: searchUserInput) {
     searchUser(input: $input)
   }
