@@ -1,0 +1,115 @@
+mutation EditOrganization($input: EditOrganizationInput) {
+  EditOrganization(input: $input)
+}
+
+mutation GenerateExcelReport($input: GenerateExcelReportInput) {
+  GenerateExcelReport(input: $input)
+}
+
+mutation UserApprovals($input: UserApprovalsInput) {
+  UserApprovals(input: $input)
+}
+
+mutation AddCreditsToUser($input: addCreditsToUserInput) {
+  addCreditsToUser(input: $input)
+}
+
+mutation AddOrRemoveQuestionToQuiz($input: addQuestionToQuizInput) {
+  addOrRemoveQuestionToQuiz(input: $input)
+}
+
+mutation ClearErrorLogs {
+  clearErrorLogs
+}
+
+mutation CreateCategory($input: createCategoryInput) {
+  createCategory(input: $input)
+}
+
+mutation CreateQuestion($input: createQuestionInput) {
+  createQuestion(input: $input)
+}
+
+mutation CreateQuiz($input: createQuizInput) {
+  createQuiz(input: $input)
+}
+
+mutation CreateQuizarreQuizRun($input: createQuizarreQuizRunInput) {
+  createQuizarreQuizRun(input: $input)
+}
+
+mutation CreateTeam($input: createTeamInput) {
+  createTeam(input: $input)
+}
+
+mutation CreateUser($input: createUserInput) {
+  createUser(input: $input)
+}
+
+mutation DeductCreditsFromUser($input: deductCreditsFromUserInput) {
+  deductCreditsFromUser(input: $input)
+}
+
+mutation EditCategory($input: editCategoryInput) {
+  editCategory(input: $input)
+}
+
+mutation EditPendingReviewQuestions($input: editQuestionInput) {
+  editPendingReviewQuestions(input: $input)
+}
+
+mutation EditQuestion($input: editQuestionInput) {
+  editQuestion(input: $input)
+}
+
+mutation EditQuiz($input: editQuizInput) {
+  editQuiz(input: $input)
+}
+
+mutation EditQuizRunLeaderboard($input: editQuizRunLeaderboardInput) {
+  editQuizRunLeaderboard(input: $input)
+}
+
+mutation EditQuizarreQuizRun($input: editQuizarreQuizRunInput) {
+  editQuizarreQuizRun(input: $input)
+}
+
+mutation EditTeam($input: editTeamInput) {
+  editTeam(input: $input)
+}
+
+mutation EditTeamUsers($input: editTeamUsersInput) {
+  editTeamUsers(input: $input)
+}
+
+mutation EditUser($input: editUserInput) {
+  editUser(input: $input)
+}
+
+mutation GenerateBulkUploadUrl($input: commons3Input) {
+  generateBulkUploadUrl(input: $input)
+}
+
+mutation GenerateS3UploadURL($input: commons3Input) {
+  generateS3UploadURL(input: $input)
+}
+
+mutation PublishQuizarreQuizRun($input: publishQuizarreQuizRunInput) {
+  publishQuizarreQuizRun(input: $input)
+}
+
+mutation ReorderQuizQuestions($input: reorderQuizQuestionsInput) {
+  reorderQuizQuestions(input: $input)
+}
+
+mutation ResetDashboardAndReports($input: resetDashboardAndReportsInput) {
+  resetDashboardAndReports(input: $input)
+}
+
+mutation TerminateLiveQuizRun($quiz_run_id: String!) {
+  terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
+}
+
+mutation UpdateBmsSettings($input: updateBmsSettingsInput) {
+  updateBmsSettings(input: $input)
+}
