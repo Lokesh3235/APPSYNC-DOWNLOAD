@@ -1,8 +1,0 @@
-query ListUsers {
-  listUsers {
-    items {
-      id
-      name
-    }
-  }
-}

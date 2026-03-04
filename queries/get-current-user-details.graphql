@@ -1,5 +1,0 @@
-query GetCurrentUserDetails($input: getCurrentUserDetailsInput!) {
-  getCurrentUserDetails(input: $input) {
-    id
-  }
-}
