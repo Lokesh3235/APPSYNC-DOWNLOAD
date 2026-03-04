@@ -1,0 +1,239 @@
+query GetCurrentUserDetails($input: getCurrentUserDetailsInput) {
+  getCurrentUserDetails(input: $input)
+}
+
+query GetDocumentPresignedURL($input: commons3Input) {
+  getDocumentPresignedURL(input: $input)
+}
+
+query GetOrganizationDetails($input: getOrganizationDetailsInput) {
+  getOrganizationDetails(input: $input)
+}
+
+query ListApprovals($input: listApprovalsInput) {
+  listApprovals(input: $input)
+}
+
+query ListBmsSettings {
+  listBmsSettings
+}
+
+query ListBulkUploadErrors($input: listBulkUploadErrorsInput) {
+  listBulkUploadErrors(input: $input)
+}
+
+query ListCategories($input: listCategoriesInput) {
+  listCategories(input: $input)
+}
+
+query ListCategoryReports($input: listCategoryReportsInput) {
+  listCategoryReports(input: $input)
+}
+
+query ListCreditsHistory($input: listCreditsHistoryInput) {
+  listCreditsHistory(input: $input)
+}
+
+query ListDeviceBrowserReports($input: listDeviceBrowserReportsInput) {
+  listDeviceBrowserReports(input: $input)
+}
+
+query ListLocationReports($input: listLocationReportsInput) {
+  listLocationReports(input: $input)
+}
+
+query ListPendingReviewQuestions($next_token: String, $organization_id: String, $question_review_status: questionReviewStatusEnum!) {
+  listPendingReviewQuestions(next_token: $next_token, organization_id: $organization_id, question_review_status: $question_review_status)
+}
+
+query ListQuestionReports($input: listQuestionReportsInput) {
+  listQuestionReports(input: $input)
+}
+
+query ListQuestions($input: listQuestionsInput2) {
+  listQuestions(input: $input)
+}
+
+query ListQuizQuestions($quiz_id: String) {
+  listQuizQuestions(quiz_id: $quiz_id)
+}
+
+query ListQuizQuestions2($input: listQuizQuestions2Input) {
+  listQuizQuestions2(input: $input)
+}
+
+query ListQuizRunLeaderboard($input: listQuizRunLeaderboardInput) {
+  listQuizRunLeaderboard(input: $input)
+}
+
+query ListQuizRunReports($input: listQuizRunReportsInput) {
+  listQuizRunReports(input: $input)
+}
+
+query ListQuizRunValidationErrors($input: listQuizRunValidationErrorsInput) {
+  listQuizRunValidationErrors(input: $input)
+}
+
+query ListQuizStats($input: listQuizStatsInput) {
+  listQuizStats(input: $input)
+}
+
+query ListQuizarreQuizRuns($input: listQuizarreQuizRunsInput) {
+  listQuizarreQuizRuns(input: $input)
+}
+
+query ListQuizzes($input: listQuizzesInput) {
+  listQuizzes(input: $input)
+}
+
+query ListSignUpUsers($input: listSignUpUsersInput) {
+  listSignUpUsers(input: $input)
+}
+
+query ListTeamLeaderboard($input: listTeamLeaderboardInput) {
+  listTeamLeaderboard(input: $input)
+}
+
+query ListTeamUsers($input: listTeamUsersInput) {
+  listTeamUsers(input: $input)
+}
+
+query ListTeams($input: listTeamsInput) {
+  listTeams(input: $input)
+}
+
+query ListUserActivities($input: listUserActivitiesInput) {
+  listUserActivities(input: $input)
+}
+
+query ListUserQuizAttemptQuestions($input: listUserQuizAttemptQuestionsInput) {
+  listUserQuizAttemptQuestions(input: $input)
+}
+
+query ListUserQuizAttempts($input: listUserQuizAttemptsInput) {
+  listUserQuizAttempts(input: $input)
+}
+
+query ListUsers($input: listUserInput) {
+  listUsers(input: $input)
+}
+
+query SearchUser($input: searchUserInput) {
+  searchUser(input: $input)
+}
+
+mutation EditOrganization($input: EditOrganizationInput) {
+  EditOrganization(input: $input)
+}
+
+mutation GenerateExcelReport($input: GenerateExcelReportInput) {
+  GenerateExcelReport(input: $input)
+}
+
+mutation UserApprovals($input: UserApprovalsInput) {
+  UserApprovals(input: $input)
+}
+
+mutation AddCreditsToUser($input: addCreditsToUserInput) {
+  addCreditsToUser(input: $input)
+}
+
+mutation AddOrRemoveQuestionToQuiz($input: addQuestionToQuizInput) {
+  addOrRemoveQuestionToQuiz(input: $input)
+}
+
+mutation ClearErrorLogs {
+  clearErrorLogs
+}
+
+mutation CreateCategory($input: createCategoryInput) {
+  createCategory(input: $input)
+}
+
+mutation CreateQuestion($input: createQuestionInput) {
+  createQuestion(input: $input)
+}
+
+mutation CreateQuiz($input: createQuizInput) {
+  createQuiz(input: $input)
+}
+
+mutation CreateQuizarreQuizRun($input: createQuizarreQuizRunInput) {
+  createQuizarreQuizRun(input: $input)
+}
+
+mutation CreateTeam($input: createTeamInput) {
+  createTeam(input: $input)
+}
+
+mutation CreateUser($input: createUserInput) {
+  createUser(input: $input)
+}
+
+mutation DeductCreditsFromUser($input: deductCreditsFromUserInput) {
+  deductCreditsFromUser(input: $input)
+}
+
+mutation EditCategory($input: editCategoryInput) {
+  editCategory(input: $input)
+}
+
+mutation EditPendingReviewQuestions($input: editQuestionInput) {
+  editPendingReviewQuestions(input: $input)
+}
+
+mutation EditQuestion($input: editQuestionInput) {
+  editQuestion(input: $input)
+}
+
+mutation EditQuiz($input: editQuizInput) {
+  editQuiz(input: $input)
+}
+
+mutation EditQuizRunLeaderboard($input: editQuizRunLeaderboardInput) {
+  editQuizRunLeaderboard(input: $input)
+}
+
+mutation EditQuizarreQuizRun($input: editQuizarreQuizRunInput) {
+  editQuizarreQuizRun(input: $input)
+}
+
+mutation EditTeam($input: editTeamInput) {
+  editTeam(input: $input)
+}
+
+mutation EditTeamUsers($input: editTeamUsersInput) {
+  editTeamUsers(input: $input)
+}
+
+mutation EditUser($input: editUserInput) {
+  editUser(input: $input)
+}
+
+mutation GenerateBulkUploadUrl($input: commons3Input) {
+  generateBulkUploadUrl(input: $input)
+}
+
+mutation GenerateS3UploadURL($input: commons3Input) {
+  generateS3UploadURL(input: $input)
+}
+
+mutation PublishQuizarreQuizRun($input: publishQuizarreQuizRunInput) {
+  publishQuizarreQuizRun(input: $input)
+}
+
+mutation ReorderQuizQuestions($input: reorderQuizQuestionsInput) {
+  reorderQuizQuestions(input: $input)
+}
+
+mutation ResetDashboardAndReports($input: resetDashboardAndReportsInput) {
+  resetDashboardAndReports(input: $input)
+}
+
+mutation TerminateLiveQuizRun($quiz_run_id: String!) {
+  terminateLiveQuizRun(quiz_run_id: $quiz_run_id)
+}
+
+mutation UpdateBmsSettings($input: updateBmsSettingsInput) {
+  updateBmsSettings(input: $input)
+}
