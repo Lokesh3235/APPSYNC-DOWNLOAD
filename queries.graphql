@@ -1,3 +1,7 @@
   query ListUsers($input: listUserInput) {
     listUsers(input: $input)
   }
+
+  query ListUsers2($input: listUserInput) {
+    listUsers2(input: $input)
+  }

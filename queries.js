@@ -7,3 +7,9 @@ export const listUsers = /* GraphQL */ `
     listUsers(input: $input)
   }
 `;
+
+export const listUsers2 = /* GraphQL */ `
+  query ListUsers2($input: listUserInput) {
+    listUsers2(input: $input)
+  }
+`;

@@ -9,6 +9,7 @@ type Mutation {
 
 type Query {
   listUsers(input: listUserInput): AWSJSON
+  listUsers2(input: listUserInput): AWSJSON
 }
 
 input createUserInput {
