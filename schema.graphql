@@ -5,6 +5,7 @@ schema {
 
 type Mutation {
   createUser(input: createUserInput): AWSJSON
+  createUser2(input: createUserInput): AWSJSON
 }
 
 type Query {
