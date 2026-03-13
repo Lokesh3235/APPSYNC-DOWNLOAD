@@ -13,3 +13,7 @@
   mutation CreateUser2($input: createUserInput) {
     createUser2(input: $input)
   }
+
+  mutation CreateUser3($input: createUserInput) {
+    createUser3(input: $input)
+  }

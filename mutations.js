@@ -13,3 +13,9 @@ export const createUser2 = /* GraphQL */ `
     createUser2(input: $input)
   }
 `;
+
+export const createUser3 = /* GraphQL */ `
+  mutation CreateUser3($input: createUserInput) {
+    createUser3(input: $input)
+  }
+`;
